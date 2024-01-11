@@ -1,20 +1,11 @@
-# Используем образ Golang
 FROM golang:1.21-alpine
 
-# Выводим информацию о версии Go
 RUN go version
-
-# Устанавливаем переменную окружения GOPATH
 ENV GOPATH=/
 
-# Копируем все файлы проекта в текущую директорию образа
-COPY ./ .
+COPY ./ ./
 
-# Загружаем зависимости модулей Go
 RUN go mod download
+RUN go build -o awesome_project ./main.go
 
-# Собираем проект в бинарный файл my_hata
-RUN go build -o my_hata ./main.go
-
-# Указываем команду для запуска приложения
-CMD ["./my_hata"]
+CMD ["./awesome_project"]
