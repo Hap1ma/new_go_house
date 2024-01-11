@@ -2,7 +2,7 @@ package family
 
 import "fmt"
 
-type FamilyMembers struct {
+type Relatives struct {
 	Sex          bool
 	Age          int
 	Name         string
@@ -10,7 +10,7 @@ type FamilyMembers struct {
 	Children     int
 }
 
-func (f FamilyMembers) Print() {
+func (f Relatives) Print() {
 	fmt.Print("Имя: ", f.Name, "\nВозраст: ", f.Age, "\n")
 	if f.Sex {
 		fmt.Print("Пол: Мужской\n")

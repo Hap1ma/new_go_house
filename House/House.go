@@ -10,7 +10,7 @@ import (
 )
 
 type House struct {
-	Family        []relatives.Family
+	Family        []relatives.Familia
 	Devices       []devices.Devices
 	Furniture     []furniture.Furniture
 	Rooms         int
@@ -38,7 +38,7 @@ func Make() House {
 		Color:         "White",
 		ComfortRating: 1,
 	}
-	Сhair := furniture.Furniture{
+	Chair := furniture.Furniture{
 		Type:          "Стул",
 		Length:        30,
 		Width:         30,
@@ -67,49 +67,49 @@ func Make() House {
 		ComfortRating: 1000,
 	}
 
-	Me := family.FamilyMembers{
+	Me := family.Relatives{
 		Sex:          true,
 		Age:          0,
 		Name:         "Я",
 		FamilyStatus: false,
 		Children:     10,
 	}
-	FroggySonya := family.FamilyMembers{
+	FroggySonya := family.Relatives{
 		Sex:          true,
 		Age:          0,
 		Name:         "Жабий Соня",
 		FamilyStatus: true,
 		Children:     10,
 	}
-	FroggyDima := family.FamilyMembers{
+	FroggyDima := family.Relatives{
 		Sex:          true,
 		Age:          1,
 		Name:         "Жабий Дима",
 		FamilyStatus: true,
 		Children:     10,
 	}
-	Capybara := family.FamilyMembers{
+	Capybara := family.Relatives{
 		Sex:          false,
 		Age:          0,
 		Name:         "Капибара Дима(или Соня)",
 		FamilyStatus: false,
 		Children:     0,
 	}
-	BillyHerrington := family.FamilyMembers{
+	BillyHerrington := family.Relatives{
 		Sex:          false,
 		Age:          777,
 		Name:         "Дакимакура",
 		FamilyStatus: false,
 		Children:     0,
 	}
-	Shark := family.FamilyMembers{
+	Shark := family.Relatives{
 		Sex:          true,
 		Age:          1,
 		Name:         "Петя",
 		FamilyStatus: false,
 		Children:     0,
 	}
-	Dinosaur := family.FamilyMembers{
+	Dinosaur := family.Relatives{
 		Sex:          true,
 		Age:          1,
 		Name:         "Игорян",
@@ -153,8 +153,8 @@ func Make() House {
 		VoiceControl: true,
 	}
 	house := House{
-		Family: []relatives.Family{relatives.Family{
-			FamilyMembers: []family.FamilyMembers{Me, FroggyDima, FroggySonya, Capybara, BillyHerrington, Shark, Dinosaur},
+		Family: []relatives.Familia{relatives.Familia{
+			FamilyMembers: []family.Relatives{Me, FroggyDima, FroggySonya, Capybara, BillyHerrington, Shark, Dinosaur},
 			Surname:       "моя хата",
 		},
 		},

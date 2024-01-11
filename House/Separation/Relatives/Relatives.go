@@ -2,17 +2,17 @@ package relatives
 
 import (
 	"fmt"
-	"new_go_house/House/Relatives/Family"
+	family "new_go_house/House/Separation/Relatives/Family"
 )
 
-type Family struct {
-	FamilyMembers []family_members.FamilyMembers
+type Familia struct {
+	FamilyMembers []family.Relatives
 	Surname       string
 }
 
-func (f Family) Print() {
+func (f Familia) Print() {
 	fmt.Print("Семья: ", f.Surname, "\n")
-	for _, familyMembers := range f.FamilyMembers {
-		familyMembers.Print()
+	for _, Relatives := range f.Relatives {
+		Relatives.Print()
 	}
 }

@@ -2,13 +2,13 @@ package furniture
 
 import (
 	"fmt"
-	"new_go_house/House/Units"
+	units "new_go_house/House/Separation/Units"
 )
 
 type Furniture struct {
 	Type          string
-	Length        types.Centimeter
-	Width         types.Centimeter
+	Length        units.Centimeter
+	Width         units.Centimeter
 	Color         string
 	ComfortRating int
 }
