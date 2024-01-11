@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  house-builder:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ./my_hata
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+    environment:
+      - DB_NAME=admin
+      - DB_USER=user
+      - DB_PASSWORD=1234
+  db:
+    restart: always
+    image: postgres:16-alpine
+    volumes:
+      - ./database/postgres/data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=123
+    ports:
+      - 5436:5432
