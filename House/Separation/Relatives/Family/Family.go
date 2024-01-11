@@ -1,4 +1,4 @@
-package family_members
+package family
 
 import "fmt"
 
